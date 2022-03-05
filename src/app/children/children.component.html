@@ -1,0 +1,19 @@
+
+<ng-container *ngIf="item">
+    <div class="row m-5 " *ngFor=" let oneitem of item">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item"><a class="btn">{{oneitem}}</a></li>
+      <div class="clearfix" >
+      <button onclick="myFunction()" type="button" class="deletebtn" style="background-color: rgb(56, 56, 190); color: rgb(243, 234, 234); height: 55px; width: 55px;">Delete</button>
+    
+      </div>  </ul>
+  </div>
+  
+  <p id="demo"></p>
+  <script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "";
+  }
+  </script>
+  </ng-container>
+  
