@@ -6,13 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-icon:string[]=[]
+  icon: string []=[]
   constructor() { }
   
   ngOnInit(): void {
   }
 addIteam(newvar:string){
   this.icon.push(newvar);
+  console.log(this.icon)
+}
+removeIteam(newvar:string){
+  this.icon = this.icon.filter(value => {
+    return value !== newvar ;
+  });
   console.log(this.icon)
 }
 }

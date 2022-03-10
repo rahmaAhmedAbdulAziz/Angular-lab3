@@ -1,4 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
+// import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-children',
@@ -7,10 +8,13 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class ChildrenComponent implements OnInit {
   @Input() item:any;
-
+@Output() removeVarEvent = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  delete(value: string){
+    this.removeVarEvent.emit(value);
+  }
 }
