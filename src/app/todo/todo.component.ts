@@ -11,7 +11,7 @@ export class TodoComponent implements OnInit {
   
   ngOnInit(): void {
   }
-addIteam(newvar:string){
+addIteam(newvar:any){
   this.icon.push(newvar);
   console.log(this.icon)
 }
